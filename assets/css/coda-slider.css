@@ -147,3 +147,9 @@ ul.navigation a:focus {
 .hide {
     display: none;
 }
+
+#extraoptions
+{
+	width:300px;
+	float:right;
+}

@@ -1,17 +1,12 @@
 <div class="panel" id="home">
-    <h1>Introducing Mini Social website</h1>    
-    <div class="image_wrapper image_fl"><img src="<?php echo SITE_URL; ?>/assets/images/templatemo_image_01.jpg" alt="image" /></div>
+    <h1>Welcome to TechSpardha</h1>    
+    <div class="image_wrapper image_fl"><img src="<?php echo SITE_URL; ?>/assets/images/templatemo_image_01.jpg" alt="image" />
+	    
+    </div>
     <p>
         <em>
-            Nullam at erat ipsum, quis tincidunt mauris. Nunc sit amet sapien eget eros iaculis hendrerit quis a enim. Validate
-            <a href="http://validator.w3.org/check?uri=referer" rel="nofollow">
-                XHTML
-            </a>
-            &amp;
-            <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow">
-                CSS
-            </a>
-            .</em>
+            Every Thing Is DESIGNED , A Few Things Are Designed WELL. 
+        </em>
     </p>
     <p>
         Mini Social is a 

@@ -21,10 +21,10 @@ ini_set("display_errors", "1");
         <script src="<?php echo SITE_URL; ?>/assets/javascript/jquery.serialScroll-1.2.1.js" type="text/javascript" charset="utf-8"></script>
         <script src="<?php echo SITE_URL; ?>/assets/javascript/coda-slider.js" type="text/javascript" charset="utf-8"></script>
         <script src="<?php echo SITE_URL; ?>/assets/javascript/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
-
+	
     </head>
     <body>
-        <div id="slider">
+        <div id="slider" style="float:left;">
             <?php require_once SITE_PATH . '/View/mainMenu.php'; ?>
             <div id="templatemo_main">
                 <?php require_once SITE_PATH . '/View/socialNetworkLinks.php'; ?>
@@ -64,5 +64,6 @@ ini_set("display_errors", "1");
 
             </div> <!-- end of main -->
         </div>
+	<div id="extraoptions"><a href="#"><img src="<?php echo SITE_URL . '/assets/images/webdesign.png'; ?>" height=100 width=200/></a></div>
     </body>
 </html>

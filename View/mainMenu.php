@@ -1,6 +1,9 @@
 <div id="templatemo_sidebar">
     <div id="templatemo_header">
-        <a href="http://www.templatemo.com" target="_parent"><img src="<?php echo SITE_URL; ?>/assets/images/TechSpardha.png" alt="Mini Social" /></a>
+        <a href="http://www.templatemo.com" target="_parent"><img src="<?php echo SITE_URL; ?>/assets/images/TechSpardha.png" alt="Mini Social" style="height:70%;width:120%;margin-left:-10%;margin-top:-10%;"/></a>
+	<h2>
+            Thinking Like A Customer... 
+        </h2>
     </div> <!-- end of header -->
 
     <ul class="navigation">
