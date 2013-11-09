@@ -5,9 +5,16 @@
 
 3.our work-our projects
 
-4.contact us-our information,FORM---------fields:-1.name
-                                                  2.email 
-                                                  3.phone number
-                                                  4.how can we help u
+4.contact us-our information,FORM---------fields:-1.id
+						  2.name
+                                                  3.email 
+                                                  4.phone number
+                                                  5.how can we help u
+                                                  6.status
 
-5.services-types of project we develop
+5.reply table to contactus table------------------1.id
+						  2.contactid
+						  3.subject
+						  4.Message
+
+6.services-types of project we develop
