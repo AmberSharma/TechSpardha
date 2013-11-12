@@ -12,6 +12,7 @@
 
  *  ************************************************************************************************************
  */
+require_once getcwd().'/Controller/Acontroller.php';
 class MainController extends Acontroller {
 	/**
 	 *
@@ -499,30 +500,8 @@ class MainController extends Acontroller {
 		$objSeatEmployee->mulitDelete ( $_POST ['multiDel'], $_POST ['reason'] );
 		echo "Seat Deleted";
 	}
-	/**
-	 *
-	 * @author Chetan Sharma
-	 *         This function will get users panal page
-	 */
-	public function getUsersView() {
-		$userObj = $this->loadModel ( 'Users' );
-		$result = $userObj->fetchAllAdminUser ();
-		$this->loadView ( 'UsersPanal', $result );
-	}
-	/**
-	 *
-	 * @author Chetan Sharma
-	 *         This function will get report page with all data
-	 */
-	public function reportFetch() {
-		$userObj = $this->loadModel ( 'Users' );
-		$allData ['users'] = $userObj->fetchAllAdminUser (); // Get user Details
-		$roomObj = $this->loadModel ( 'Room' );
-		$allData ['rooms'] = $roomObj->fetchAllRoomDetails (); // Get Room Details
-		$empObj = $this->loadModel ( 'Employee' );
-		$allData ['employee'] = $empObj->getAllEmployee (); // Get Employee Details
-		$this->loadView ( 'Report', $allData ); // Render Report page
-	}
+	
+	
 	/**
 	 * Function to Delete a Users
 	 */
@@ -690,11 +669,11 @@ class MainController extends Acontroller {
      * @author Chetan Sharma
      *         This function will get users panal page
      */
-    public function getUsersView() {
-       // $userObj = $this->loadModel ( 'Users' );
-       // $result = $userObj->fetchAllAdminUser ();
-        //$this->loadView ( 'UsersPanal', $result );
-echo"hi"
+    public function saveContactUs() {
+       $userObj = $this->loadModel ( 'mainModel' );
+       $result = $userObj->saveContactUs ();
+	print_r($result);
+       //$this->loadView ( 'UsersPanal', $result );
     }
 
 }

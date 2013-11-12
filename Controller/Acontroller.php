@@ -18,7 +18,7 @@ abstract class Acontroller {
 	 * @return Object of model class
 	 */
 	function loadModel($modelName = "") {
-		include_once SITE_PATH . '/libraries/DBconnect.php';
+		include_once SITE_PATH . '/Controller/singleton.php';
 		include SITE_PATH . '/Model/' . $modelName . '.php';
 		return new $modelName ();
 	}

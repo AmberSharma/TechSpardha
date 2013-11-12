@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors","1");
 /**
  * Creation Log File Name - index.php 
  * Description - TechSpardha index file
@@ -22,18 +23,21 @@ session_start();
  *  Including all constants to be used 
  */
 require_once getcwd().'/libraries/constants.php';
+require_once getcwd().'/Controller/MainController.php';
+
 //require_once getcwd().'/libraries/Security.php';
 //require_once getcwd().'/libraries/Logger.php';
+
 require_once(__DIR__."/libraries/validate.php");
 
 /**
  *  Requiring all essential files 
  */
-
+/*
 function __autoload($controller) {
 	include __DIR__ .'/Controller/'.$controller . '.php';
 }
-
+*/
 /**
  * Method calls from views handled here 
  */
@@ -60,8 +64,8 @@ if (isset ( $_REQUEST ['controller'] )) {
 			
 			if (method_exists ( $object, $_REQUEST ["method"] )) {
 				if(!in_array($_REQUEST ["method"],array('loginClick','logHistory'))) {
-					$objSecurity= new Security();
-            		$objSecurity->secureMultiLogin( $_SESSION['username']);
+					//$objSecurity= new Security();
+            		//$objSecurity->secureMultiLogin( $_SESSION['username']);
 				}
 				$object->$_REQUEST ["method"] ();
 				if($_REQUEST ["method"]=='loadView')
@@ -78,8 +82,8 @@ if (isset ( $_REQUEST ['controller'] )) {
 }
 else if (isset($_SESSION ["username"]))
 {
-	$objSecurity= new Security();
-    	$objSecurity->secureMultiLogin( $_SESSION['username']);
+	//$objSecurity= new Security();
+    	//$objSecurity->secureMultiLogin( $_SESSION['username']);
 	$objMainController = new MainController();
 	$objMainController->loadView("mainPage");
 }
