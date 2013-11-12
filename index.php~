@@ -79,7 +79,7 @@ if (isset ( $_REQUEST ['controller'] )) {
 else if (isset($_SESSION ["username"]))
 {
 	$objSecurity= new Security();
-    $objSecurity->secureMultiLogin( $_SESSION['username']);
+    	$objSecurity->secureMultiLogin( $_SESSION['username']);
 	$objMainController = new MainController();
 	$objMainController->loadView("mainPage");
 }
@@ -90,7 +90,7 @@ else
 	 * Showing the main Login view 
 	 */
     $objMainController = new MainController();    
-    $objMainController->loadView("main");
+    $objMainController->loadView("homePage");
 }
 
 /** 

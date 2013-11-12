@@ -685,4 +685,16 @@ class MainController extends Acontroller {
 		$this->loadView('error404');
 	}
 	
+/**
+     *
+     * @author Chetan Sharma
+     *         This function will get users panal page
+     */
+    public function getUsersView() {
+       // $userObj = $this->loadModel ( 'Users' );
+       // $result = $userObj->fetchAllAdminUser ();
+        //$this->loadView ( 'UsersPanal', $result );
+echo"hi"
+    }
+
 }

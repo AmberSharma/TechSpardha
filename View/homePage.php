@@ -16,6 +16,7 @@ ini_set("display_errors", "1");
         <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/coda-slider.css" type="text/css" media="screen" charset="utf-8" />
 
         <script src="<?php echo SITE_URL; ?>/assets/javascript/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="<?php echo SITE_URL; ?>/assets/javascript/functions.js" type="text/javascript"></script>
         <script src="<?php echo SITE_URL; ?>/assets/javascript/jquery.scrollTo-1.3.3.js" type="text/javascript"></script>
         <script src="<?php echo SITE_URL; ?>/assets/javascript/jquery.localscroll-1.2.5.js" type="text/javascript" charset="utf-8"></script>
         <script src="<?php echo SITE_URL; ?>/assets/javascript/jquery.serialScroll-1.2.1.js" type="text/javascript" charset="utf-8"></script>

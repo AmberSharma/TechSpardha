@@ -1,4 +1,5 @@
 <?php
+ini_set("display_errors","1");
 /**
  * Creation Log File Name - index.php 
  * Description - TechSpardha index file
