@@ -670,9 +670,17 @@ class MainController extends Acontroller {
      *         This function will get users panal page
      */
     public function saveContactUs() {
+
+ $name=$_REQUEST['name'];
+$email=$_REQUEST['email'];
+$phone=$_REQUEST['phone'];
+$text=$_REQUEST['text'];
+
+
        $userObj = $this->loadModel ( 'mainModel' );
-       $result = $userObj->saveContactUs ();
+       $result = $userObj->saveContactUs ($name,$email,$phone,$text);
 	print_r($result);
+echo"hi";
        //$this->loadView ( 'UsersPanal', $result );
     }
 

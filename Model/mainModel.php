@@ -160,12 +160,13 @@ class mainModel extends model
         return md5($password);
     }
     
-	public function saveContactUs()
+	public function saveContactUs($name,$email,$phone,$text)
 	{
-		$this->db->Fields (array("name"));
+		$this->db->Fields (array("name"=>$name));
 		$this->db->From ( "contactus");
 		//$this->db->Where (array("name" => $this->getUser ()));
-		$this->db->Select ();
+		$this->db->Insert();
+		echo $this->db->lastQuery();
 		$result = $this->db->resultArray();
 		return $result;
 	}

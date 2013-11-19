@@ -3,7 +3,7 @@
     <div id="contact_form">
         <form method="post" name="contact" action="#contactus" id="contactUsForm">
 
-            <label for="author">Your Name:</label> <input type="text" id="author" name="author" class="required input_field" />
+            <label for="author">Your Name:</label> <input type="text" id="author" name="name" class="required input_field" />
             <div class="cleaner_h10"></div>
 
             <label for="email">Your Email:</label> <input type="text" id="email" name="email" class="validate-email required input_field" />
