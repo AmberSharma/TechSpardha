@@ -162,12 +162,14 @@ class mainModel extends model
     
 	public function saveContactUs($name,$email,$phone,$text)
 	{
-		$this->db->Fields (array("name"=>$name));
+
+		$this->db->Fields (array("name"=>$name,"email"=>$email,"query"=>$text,"phonenumber"=>$phone,"status"=>"A"));
 		$this->db->From ( "contactus");
 		//$this->db->Where (array("name" => $this->getUser ()));
 		$this->db->Insert();
 		echo $this->db->lastQuery();
 		$result = $this->db->resultArray();
+$i++;
 		return $result;
 	}
 }
