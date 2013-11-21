@@ -671,14 +671,16 @@ class MainController extends Acontroller {
      */
     public function saveContactUs() {
 
- $name=$_REQUEST['name'];
-$email=$_REQUEST['email'];
-$phone=$_REQUEST['phone'];
-$text=$_REQUEST['text'];
+
 
 
        $userObj = $this->loadModel ( 'mainModel' );
-       $result = $userObj->saveContactUs ($name,$email,$phone,$text);
+$userObj->setName($_REQUEST['name']);
+$userObj->setEmail($_REQUEST['email']);
+$userObj->setQuery($_REQUEST['text']);
+$userObj->setPhonenumber($_REQUEST['phone']);
+$userObj->setStatus('A');
+       $result = $userObj->saveContactUs ();
 	print_r($result);
 echo"hi";
        //$this->loadView ( 'UsersPanal', $result );

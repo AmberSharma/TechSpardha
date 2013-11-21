@@ -17,29 +17,98 @@
 require_once getcwd().'/Model/model.php';
 class mainModel extends model
 {
+private $name;
+  private function getName ()
+    {
+        return $this->name;
+    }
 
+    /**
+     *
+     * @param String $password            
+     */
+    private function setName ($name)
+    {
+        $this->name = $name;
+    }
+private $email;
+  private function getEmail ()
+    {
+        return $this->$email;
+    }
+
+    /**
+     *
+     * @param String $password            
+     */
+    private function setEmail ($email)
+    {
+        $this->email = $email;
+    }
+private $query;
+  private function getQuery ()
+    {
+        return $this->$query;
+    }
+
+    /**
+     *
+     * @param String $password            
+     */
+    private function setPassword ($query)
+    {
+        $this->query = $query;
+    }
+private $status;
+  private function getStatus ()
+    {
+        return $this->$status;
+    }
+
+    /**
+     *
+     * @param String $password            
+     */
+    private function setStatus ($status)
+    {
+        $this->status = $password;
+    }
+private $phonenumber;
+  private function getPhonenumber ()
+    {
+        return $this->$phonenumber;
+    }
+
+    /**
+     *
+     * @param String $password            
+     */
+    private function setPhonenumber ($phonenumber)
+    {
+        $this->phonenumber = $phonenumber;
+    }
     /**
      *
      * @var String Store the password in md5 format
      */
-    private $_password;
+   
 
     /**
      *
      * @var Integer User ID from Database
      */
-    private $_id;
+   
 
     /**
      *
      * @var String Store the username
      */
-    private $_username;
+  
 
     /**
      * return $password
      */
-    private function getPassword ()
+   /** private function getPassword ()
     {
         return $this->_password;
     }
@@ -48,7 +117,7 @@ class mainModel extends model
      *
      * @param String $password            
      */
-    private function setPassword ($password)
+   /** private function setPassword ($password)
     {
         $this->_password = $password;
     }
@@ -56,7 +125,7 @@ class mainModel extends model
     /**
      * return $username
      */
-    private function getUsername ()
+   /** private function getUsername ()
     {
         return $this->_username;
     }
@@ -65,7 +134,7 @@ class mainModel extends model
      *
      * @param String $username            
      */
-    private function setUsername ($username)
+  /**  private function setUsername ($username)
     {
         $this->_username = $username;
     }
@@ -74,7 +143,7 @@ class mainModel extends model
      *
      * @param Int $userid            
      */
-    private function setUserId ($id)
+  /**  private function setUserId ($id)
     {
         $this->_id = $id;
     }
@@ -82,7 +151,7 @@ class mainModel extends model
     /**
      * return $userid
      */
-    private function getUserId ()
+   /** private function getUserId ()
     {
         return $this->_id;
     }
@@ -160,10 +229,10 @@ class mainModel extends model
         return md5($password);
     }
     
-	public function saveContactUs($name,$email,$phone,$text)
+	public function saveContactUs()
 	{
 
-		$this->db->Fields (array("name"=>$name,"email"=>$email,"query"=>$text,"phonenumber"=>$phone,"status"=>"A"));
+		$this->db->Fields (array("name"=>$this->getName(),"email"=>$this->getEmail(),"query"=>$this->getQuery(),"phonenumber"=>$this->getPhonenumber(),"status"=>$this->getStatus()));
 		$this->db->From ( "contactus");
 		//$this->db->Where (array("name" => $this->getUser ()));
 		$this->db->Insert();
